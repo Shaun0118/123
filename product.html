@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>產品介紹</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #banner {
+            background-image: url(.//images/Ohlins-5.jpg);
+            height: 400px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin-top: 3.5rem;
+        }
+
+        #card1,
+        #card2,
+        #card3 {
+            transition: 1s;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .box img {
+            transition: 0.5s;
+        }
+
+        .box:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html"><img src="./images/ohlins_logo_notext.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="./index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active " href="./product.html">產品介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./dealer.html">經銷據點</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="banner"></div>
+
+    <div class="container my-2">
+        <h3 class="text-danger fw-bold">產品介紹</h3>
+        <hr>
+        <h3 class="text-center m-4">線圈彈簧 | Coil</h3>
+        <div class="row">
+            <div class="col-lg mb-3">
+                <div class="card" id="card1">
+                    <div class="box">
+                        <img src="./images/00KitsumaCoil.45.Vert_.Transparent.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">TTX-45 | Coil</h5>
+                        <p class="card-text">內部則使用搪孔加工，降低筒身內部與活塞間的摩擦係數，最後在表面再施以陽極硬化處理防止氧化</p>
+                        <a href="./detail.html" class="btn btn-outline-danger float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mb-3">
+                <div class="card" id="card2">
+                    <div class="box">
+                        <img src="./images/00DBCoil_IL_Tutorial-768x1152.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">TTR-36 | Coil</h5>
+                        <p class="card-text">鍍硬鉻14mm軸心高彈性矽鉻鋼合金鋼，製造過程中經過預壓處理使彈簧不容易彈性疲乏</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg mb-3">
+                <div class="card" id="card3">
+                    <div class="box">
+                        <img src="./images/ttx36mkII_EC_05_2-380x240.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">腳踏車 AIR</h5>
+                        <p class="card-text">使用6061-T6鋁合金CNC切削加工製成，表面處理施以陽極硬化處理防止氧化及增加表面硬度</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mb-3">
+                <div class="card" id="card1">
+                    <div class="box">
+                        <img src="./images/STX-46-Blackline_S46PR1C1L_S46DR.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">摩托車 TTX</h5>
+                        <p class="card-text">降低筒身內部與活塞間的摩擦係數，最後在表面再施以陽極硬化處理防止氧化</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mb-3">
+                <div class="card" id="card2">
+                    <div class="box">
+                        <img src="./images/TTX-Flow-2018_3-380x240.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">汽車 GROUP</h5>
+                        <p class="card-text">鍍硬鉻14mm軸心高彈性矽鉻鋼合金鋼，製造過程中經過預壓處理使彈簧不容易彈性疲乏</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mb-3">
+                <div class="card" id="card3">
+                    <div class="box">
+                        <img src="./images/STX46_DU505_4-380x240.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">腳踏車 AIR</h5>
+                        <p class="card-text">使用6061-T6鋁合金CNC切削加工製成，表面處理施以陽極硬化處理防止氧化及增加表面硬度</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-center m-4" data-aos="fade-up">空氣彈簧 | Air</h3>
+        <hr>
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg mb-3">
+                <div class="card" id="card1">
+                    <div class="box">
+                        <img src="./images/00KITSUM3.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">SX-62 | Air</h5>
+                        <p class="card-text">內部則使用搪孔加工，降低筒身內部與活塞間的摩擦係數，最後在表面再施以陽極硬化處理防止氧化</p>
+                        <a href="./detail.html" class="btn btn-outline-danger float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mb-3">
+                <div class="card" id="card2">
+                    <div class="box">
+                        <img src="./images/00DBAir_IL_Specifications_Vertical.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">SR-62 | Air</h5>
+                        <p class="card-text">鍍硬鉻14mm軸心高彈性矽鉻鋼合金鋼，製造過程中經過預壓處理使彈簧不容易彈性疲乏</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg mb-3">
+                <div class="card" id="card3">
+                    <div class="box">
+                        <img src="./images/00DBAir_IL_Specifications_Vertical.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">腳踏車 AIR</h5>
+                        <p class="card-text">使用6061-T6鋁合金CNC切削加工製成，表面處理施以陽極硬化處理防止氧化及增加表面硬度</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mb-3">
+                <div class="card" id="card1">
+                    <div class="box">
+                        <img src="./images/00DBAir_IL_Specifications_Vertical.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">摩托車 TTX</h5>
+                        <p class="card-text">降低筒身內部與活塞間的摩擦係數，最後在表面再施以陽極硬化處理防止氧化</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mb-3">
+                <div class="card" id="card2">
+                    <div class="box">
+                        <img src="./images/00DBAir_IL_Specifications_Vertical.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">汽車 GROUP</h5>
+                        <p class="card-text">鍍硬鉻14mm軸心高彈性矽鉻鋼合金鋼，製造過程中經過預壓處理使彈簧不容易彈性疲乏</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mb-3">
+                <div class="card" id="card3">
+                    <div class="box">
+                        <img src="./images/00DBAir_IL_Specifications_Vertical.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">腳踏車 AIR</h5>
+                        <p class="card-text">使用6061-T6鋁合金CNC切削加工製成，表面處理施以陽極硬化處理防止氧化及增加表面硬度</p>
+                        <a href="#" class="btn btn-outline-primary float-end">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <footer class="text-center bg-dark text-white py-2 ">
+        <a href="#"><img src="./images/line (2).png" alt=""></a>
+        <a href="#"><img src="./images/facebook (1).png" alt=""></a>
+        <a href="#"><img src="./images/instagram.png" alt=""></a>
+        <br>
+        © 2021 All Rights Reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

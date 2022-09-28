@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>關於我們</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #banner {
+            background-image: url(./images/Ohlins-5.jpg);
+            height: 400px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin-top: 3.5rem;
+        }
+
+        .backtotop {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(146, 146, 146);
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            color: black;
+            line-height: 50px;
+            text-align: center;
+            font-size: 1.2rem;
+            border-radius: 50%;
+            font-family: 'Times New Roman', Times, serif;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .backtotop:hover {
+            background-color: black;
+            color: white;
+            opacity: 1;
+            transition: 500ms;
+        }
+
+
+        /* 關於我們 碰div出現遮色 */
+
+        /* 左上方動畫 */
+        .mask1 {
+            position: relative;
+        }
+
+        .mask2 {
+            background-color: rgba(77, 77, 77, 0.6);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .mask1:hover .mask2 {
+            opacity: 1;
+        }
+
+        .mask2 h2 {
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+            transition: 1s;
+        }
+
+        .mask1:hover h2 {
+            transform: translateY(150px);
+        }
+
+        /* 右下方動畫 */
+
+        .mask3 {
+            position: relative;
+        }
+
+        .mask4 {
+            background-color: rgba(77, 77, 77, 0.6);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .mask3:hover .mask4 {
+            opacity: 1;
+        }
+
+        .mask4 h2 {
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+            transition: 1s;
+        }
+
+        .mask3:hover h2 {
+            transform: translateY(150px);
+        }
+
+        /* 關於我們右上碰1 2.3分開 左下碰4 5.6分開  */
+        #scaletext2,
+        #scaletext3,
+        #scaletext5,
+        #scaletext6 {
+            transition: 2s;
+        }
+
+        /* 右上碰1 2.3分開 */
+        #scaletext1:hover #scaletext2 {
+            color: #997d00;
+            transform: scale(1.1)translateY(80px);
+        }
+
+        #scaletext1:hover #scaletext3 {
+            color: #997d00;
+            transform: scale(1.1) translateY(-40px);
+        }
+
+        /* 左下碰4 5.6分開 */
+        #scaletext4:hover #scaletext5 {
+            color: #997d00;
+            transform: translate(-50px, -20px) scale(1.1);
+        }
+
+        #scaletext4:hover #scaletext6 {
+            color: #997d00;
+            transform: translate(50px, 20px) scale(1.1);
+        }
+
+        .aircoil {
+            color: white;
+            background-color: black;
+        }
+
+        /* .qanda {
+            background-color: black;
+        }
+
+        .qanda h1 {
+            color: white;
+        } */
+
+        .carousel-inner img {
+            width: 100vw;
+            height: 80vh;
+        }
+
+        .promise img {
+            height: 210px;
+        }
+
+        .promise {
+            background-color: black;
+            height: 80vh;
+        }
+
+        .promise h2 {
+            color: white;
+        }
+
+        /* .product {
+            width: 100vw;
+            height: 80vh;
+            background-color: rgb(52, 122, 184);
+        } */
+
+        .box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .box img {
+            transition: 0.5s;
+        }
+
+        .box:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="backtotop" id="id_backtotop" title="點我可以回到上方"><a href="#">Top</a></div>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html"><img src="./images/ohlins_logo_notext.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  " href="./product.html">產品介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./dealer.html">經銷據點</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="banner"></div>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-aos="zoom-out">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/Mod_studio-143.jpg" class="" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-start pt-5 display-5">踏上征服的旅途</h2>
+                    <h2 class="text-start">All New Shock</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/hero-selva-c-formula.jpg" class="" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-start pt-5 display-5">全新 不一樣的感受</h2>
+                    <h2 class="text-start">Coming Soon</h2>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/about_banner.jpg" class="" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-start  display-5">騎乘的工藝體現</h2>
+                    <h2 class="text-start">MS-6TX </h2>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="product mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="2000">
+                    <h2 class="text-center pt-5 display-5 mb-5">強力推薦</h2>
+                </div>
+            </div>
+            <div class="row" data-aos="zoom-in-down" data-aos-duration="1000">
+                <div class="col-3">
+                    <div class="card">
+                        <div class="box">
+                            <img src="./images/KitsumaCoil.45.Vert_.Transparent.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">TTX-45 | Coil</h5>
+                            <p class="card-text">是一款高度可調的後避震器，非常直觀且易於調整。專為在任何地形上實現最佳性能而打造。</p>
+                            <a href="./detail.html" class="btn btn-danger">查看詳情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="box">
+                            <img src="./images/DBCoil_IL_Tutorial-768x1152.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">TTR-36 | Coil</h5>
+                            <p class="card-text"> 具有高度可調性，低速壓縮和回彈迴路控制在單圈內，而高速迴路控制在兩圈內。</p>
+                            <a href="#" class="btn btn-dark">查看詳情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="box">
+                            <img src="./images/KITSUM3.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">SX-62 | Air</h5>
+                            <p class="card-text">主阻尼活塞通過外部可調阻尼閥在壓縮室和回彈室之間強制阻尼油，轉化為更高的一致性。</p>
+                            <a href="#" class="btn btn-dark">查看詳情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="box">
+                            <img src="./images/DBAir_IL_Specifications_Vertical.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">SR-62 | Air</h5>
+                            <p class="card-text">是市場上重量最輕的線圈避震器，與同類產品中的其他避震器相比，阻尼油增加了50%</p>
+                            <a href="#" class="btn btn-dark">查看詳情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="aircoil">
+        <div class="container">
+            <h2 data-aos="fade-down" data-aos-duration="1000" id="aaa" class="text-center pt-5 display-5">如何挑選避震器?</h2>
+            <div class="row" data-aos="fade-up">
+                <div class="col-6 p-0">
+                    <div class="box" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="./images/airspring.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="col-6 p-0 text-center" data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="mt-5 mb-5">AIR | 空氣彈簧</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>+容易安裝設定</p>
+                            <p>+可輕易調整彈簧剛性</p>
+                            <p>+整體重量較輕</p>
+                        </div>
+                        <div class="col-6">
+                            <p>-阻力較大 小碰撞反應較差</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row" data-aos="flip-left" data-aos-duration="1500">
+                <div class="col-6 p-0">
+                    <div class="box">
+                        <img src="./images/coilspring.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="col-6 p-0 order-first text-center">
+                    <h3 class="mt-5 mb-5">COIL | 線圈彈簧</h3>
+                    <div class="row">
+                        <div class="col-6 ">
+                            <p>+線性的支撐性</p>
+                            <p>+更好的循跡性</p>
+                            <p>+阻力較小 小碰撞反應較佳</p>
+                        </div>
+                        <div class="col-6">
+                            <p>-不同荷重需更換不同彈簧</p>
+                            <p>-整體重量較重</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <h1 class=" text-center mb-5" data-aos="fade-up" data-aos-duration="1000"><strong> 關於我們 | About Us</strong></h1>
+        <div class="row align-items-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg text-center p-0" id="scaletext1">
+                <h3 id="scaletext2" class="title">| 店家資訊 About Us</h3>
+                <div id="scaletext3">
+                    <p> 避震器界的法拉利 世界最頂級的避震器</p>
+                    <p> 故事從1976年Öhlin先生在他爸的車庫裡做出了第一隻避震開始 </p>
+                </div>
+            </div>
+            <div class="col-lg order-lg-first mask1 p-0">
+                <div class="mask2">
+                    <h2>洛杉磯總部大樓</h2>
+                </div>
+                <img src="./images/Öhlins_exterior_2016_4-1280x857.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row align-items-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg text-center p-0" id="scaletext4">
+                <h3 class="title" id="scaletext5">| 店家資訊 About Us</h3>
+                <p id="scaletext6">營業時間：12:00p.m. ~ 20:00p.m.<br />電話：02-12345678<br />地址：320桃園市中壢區健行路229號
+                </p>
+            </div>
+            <div class="col-lg mask3 p-0">
+                <div class="mask4">
+                    <h2>芬蘭全球維修中心</h2>
+                </div>
+                <img src="./images/Öhlins-Northern-Europe_4_1140x641.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="promise">
+        <div class="container pt-5">
+            <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-12">
+                    <h2 class="text-center pt-5 display-5 mb-5">我們的服務</h2>
+                </div>
+            </div>
+            <div class="row" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="col-4 ">
+                    <div class="card mb-5">
+                        <div class="box">
+                            <img src="./images/explore.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text text-success fs-5">產品保固及維修服務</p>
+                            <p class="card-text">所有避震器出廠皆附有保固卡</p>
+                            <p class="card-text">消費者憑保固卡擁有產品售後保固</p>
+                            <p class="card-text">新品享一年保固</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-5">
+                        <div class="box">
+                            <img src="./images/ppp.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text text-success fs-5">打造世界頂級避震器</p>
+                            <p class="card-text">實驗室等級的研究</p>
+                            <p class="card-text">軍規級的生產 到賽事級測試優化</p>
+                            <p class="card-text">我們自許是從事一門科學般的藝術</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 mb-5">
+                    <div class="card">
+                        <div class="box">
+                            <img src="./images/springupgrade.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text text-success fs-5">客製化服務</p>
+                            <p class="card-text">在紮實技術和專業化服務的基礎上</p>
+                            <p class="card-text">提供從手工車 賽道調製的客製化需求</p>
+                            <p class="card-text">專為你打造生產</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="qanda">
+        <div class="container mb-5" style="height: auto;">
+            <h1 class="p-5 text-center" data-aos="fade-up" data-aos-duration="1000"><strong> Q & A | 常見問題</strong></h1>
+            <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-6">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    若保固內送回原廠保養是否要收費？
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <strong>是，保固期內與否和保養之間並關聯。</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    保固卡是否能補發？
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    <strong>不行，不過並不影響日後維修之權益，但產品序號請勿因任何狀況造成識別不清。</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    貼紙索取方式？
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <strong>請將「保卡」、「掛號信封」寄掛號至本公司即可。</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree0" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    是否能查詢產品初始設定、保養紀錄？
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree0" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <strong>產品初始設定無法查詢；保養紀錄請透過店家查詢。</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne1" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    如何延長產品保固？
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne1" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <strong>需做大保養更換軸心，方可延長保固一年。</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo2" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    維修需要透過何種管道？
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo2" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    <strong>請透過經銷商或者車行送回，不接受消費者自行送修。</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree3" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    如果產品調整尚有疑慮，是否能請原廠協助調整
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree3" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <strong>可以，不過得先提前預約。</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree4" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    產品外觀件褪色是否能重新處理？
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree4" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <strong>是，保固期內與否和保養之間並關聯。</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center bg-dark text-white py-2">
+        <a href="#"><img src="./images/line (2).png" alt=""></a>
+        <a href="#"><img src="./images/facebook (1).png" alt=""></a>
+        <a href="#"><img src="./images/instagram.png" alt=""></a>
+        <br>
+        © 2021 All Rights Reserved.
+    </footer>
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
