@@ -1,0 +1,16 @@
+.select_text ul {
+  width: 50%;
+  margin: 0 auto;
+}
+.select_text ul li {
+  margin-bottom: 5px;
+}
+
+.select_img {
+  /* height: 300px; */
+}
+
+.content {
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+}
