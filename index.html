@@ -33,7 +33,7 @@
         }
 
         #banner {
-            background-image: url(./images/Ohlins-5.jpg);
+            background-image: url(./images/Mandalika-MotoGP-test-Ducati-Cor.jpg);
             height: 400px;
             background-repeat: no-repeat;
             background-size: cover;
@@ -130,7 +130,7 @@
         #scaletext3,
         #scaletext5,
         #scaletext6 {
-            transition: 2s;
+            transition: 1s;
         }
 
         /* 右上碰1 2.3分開 */
@@ -147,13 +147,23 @@
         /* 左下碰4 5.6分開 */
         #scaletext4:hover #scaletext5 {
             color: #997d00;
+            transform: scale(1.1)translateY(80px);
+        }
+
+        #scaletext4:hover #scaletext6 {
+            color: #997d00;
+            transform: scale(1.1) translateY(-40px);
+        }
+
+        /* #scaletext4:hover #scaletext5 {
+            color: #997d00;
             transform: translate(-50px, -20px) scale(1.1);
         }
 
         #scaletext4:hover #scaletext6 {
             color: #997d00;
             transform: translate(50px, 20px) scale(1.1);
-        }
+        } */
 
         .aircoil {
             color: white;
@@ -204,6 +214,10 @@
 
         .box:hover img {
             transform: scale(1.1);
+        }
+
+        .text p {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -348,7 +362,7 @@
 
     <div class="aircoil">
         <div class="container">
-            <h2 data-aos="fade-down" data-aos-duration="1000" id="aaa" class="text-center pt-5 display-5">如何挑選避震器?</h2>
+            <h2 data-aos="fade-down" data-aos-duration="1000" id="aaa" class="text-center pt-5 display-5"> 如何挑選避震器?</h2>
             <div class="row" data-aos="fade-up">
                 <div class="col-6 p-0">
                     <div class="box" data-aos="fade-right" data-aos-duration="1000">
@@ -357,7 +371,7 @@
                 </div>
                 <div class="col-6 p-0 text-center" data-aos="fade-left" data-aos-duration="1000">
                     <h3 class="mt-5 mb-5">AIR | 空氣彈簧</h3>
-                    <div class="row">
+                    <div class="row text">
                         <div class="col-6">
                             <p>+容易安裝設定</p>
                             <p>+可輕易調整彈簧剛性</p>
@@ -378,7 +392,7 @@
                 </div>
                 <div class="col-6 p-0 order-first text-center">
                     <h3 class="mt-5 mb-5">COIL | 線圈彈簧</h3>
-                    <div class="row">
+                    <div class="row text">
                         <div class="col-6 ">
                             <p>+線性的支撐性</p>
                             <p>+更好的循跡性</p>
@@ -387,6 +401,26 @@
                         <div class="col-6">
                             <p>-不同荷重需更換不同彈簧</p>
                             <p>-整體重量較重</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" data-aos="flip-right" data-aos-duration="1500">
+                <div class="col-6 p-0">
+                    <div class="box" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="./images/airspring.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="col-6 p-0 text-center" data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="mt-5 mb-5">AIR | 空氣彈簧</h3>
+                    <div class="row text">
+                        <div class="col-6">
+                            <p>+容易安裝設定</p>
+                            <p>+可輕易調整彈簧剛性</p>
+                            <p>+整體重量較輕</p>
+                        </div>
+                        <div class="col-6">
+                            <p>-阻力較大 小碰撞反應較差</p>
                         </div>
                     </div>
                 </div>
